@@ -1,0 +1,85 @@
+<div class="container-fluid" style="background-image: url(https://www.itl.cat/pngfile/big/25-254878_parallel.jpg);">
+  <div class="row" style="height: 100vh; width: 150vh;">
+    <!-- Left Block -->
+    <div
+      class="col d-flex flex-column justify-content-center align-items-center"
+    >
+      
+     
+    </div>
+
+    <!-- Right Block-->
+    <div
+      class="col  d-flex flex-column justify-content-center align-items-center"
+      [formGroup]="fbFormGroup"
+      style="margin-right: 75px;" 
+      
+    >
+      <div class="alert alert-danger" role="alert" *ngIf="uiInvalidCredential">
+        error !!
+      </div>
+      <div>
+        <fa-icon [icon]="faStickyNote" style="font-size: 60px"></fa-icon>
+      </div>
+      <div style="margin-bottom: 30px;" class="h2">Notes App</div>
+
+      <div class="h4" style="margin-bottom: 20px; font-weight: bold;
+      ">Sign Up</div>
+
+      <div>
+        <input
+          type="text"
+          placeholder="Username"
+          class="form-control"
+          formControlName="username"
+          required minlength="4" maxlength="32"
+          style="margin-bottom: 5px; width: 300px; "
+        />
+      </div>
+
+      <div class="mt-1">
+        <input
+          type="password"
+          placeholder="Password"
+          class="form-control"
+          formControlName="password"
+          required minlength="4" maxlength="32"
+          style="margin-bottom: 5px; width: 300px;"
+        />
+      </div>
+
+      <div class="mt-1">
+        <input
+          type="text"
+          placeholder="Email"
+          class="form-control"
+          formControlName="email"
+          required minlength="4" maxlength="32"
+          style="margin-bottom: 5px; width: 300px;"
+        />
+      </div>
+
+      <div class="mt-1">
+        <input
+          type="text"
+          placeholder="Mobile"
+          class="form-control"
+          formControlName="mobile"
+          required minlength="4" maxlength="32"
+          style="margin-bottom: 5px; width: 300px;"
+        />
+      </div>
+
+      <button
+        class="btn btn-sm btn-primary mt-2 mb-2"
+        [disabled]="!fbFormGroup.valid"
+        (click)="registerHere()"
+        style="margin-bottom: 5px; width: 140px; font-weight: bold;"
+      >
+        Register Here
+      </button>
+
+      <a routerLink="/login">Already Have an Account ??</a> 
+    </div>
+  </div>
+</div>

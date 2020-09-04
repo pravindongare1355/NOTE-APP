@@ -1,0 +1,24 @@
+<div class="modal-header" style="background-color: silver;">
+  <h4 class="modal-title">Hi there!</h4>
+  <button
+    type="button"
+    class="close"
+    aria-label="Close"
+    (click)="activeModal.dismiss('Cross click')"
+  >
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+<div class="modal-body" style="background-color:silver;">
+  <p>Hello, Do you want to log out!</p>
+</div>
+
+<div class="modal-footer" style="background-color:silver;">
+  <button type="button" class="btn btn-outline-dark" (click)="logOutAndClose()">
+    Log Out
+  </button>
+  <button type="button" class="btn btn-outline-dark" (click)="closeTheModal()">
+    Close
+  </button>
+</div>

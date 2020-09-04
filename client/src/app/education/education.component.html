@@ -1,0 +1,66 @@
+<!-- <div class="new" style="background-image: url(https://picsum.photos/seed/picsum/1400/600);"> -->
+
+<div class="container-fluid" [formGroup]="fbFormGroup" style= "background-image: linear-gradient( white,skyblue);">
+
+     <div class="row" style="height: 35vh;"style="background-image: linear-gradient(white,skyblue);">
+          <div class="col-4" style="background-image: linear-gradient( white,skyblue);"></div>
+
+          <div class="col-4" style="background-image: linear-gradient( white,skybluew);">
+
+          <h3>Create Note Here !!</h3>
+
+      <div>
+        
+          <input type="text" placeholder="Title" class="form-control" formControlName="title"
+          style="margin-bottom: 5px; width: 415px; border-color:cornflowerblue ; border-width: 3px;" />
+      </div>
+
+    <div class="continer">
+      <textarea class="form-control"
+             formControlName="note" rows="4"
+              name="notesContent" id="" 
+              style="height: 35vh; width: 415px; border-color: cornflowerblue; border-width: 3px;">
+     </textarea>
+    </div>
+
+
+      <button class="btn btn-outline-primary mr-1"  (click)="createHere()" 
+                  style="color:black; margin-top: 10px; font-weight: bold;"  >Create </button>
+                  
+
+          
+<!-- <button class="destroy" (click)="destroyTodo(todo)"></button> -->
+
+      <button type="submit" class="btn  btn-outline-primary" 
+                  style="margin-left: 10px; margin-top: 10px; color: black; font-weight: bold;" (click) = "delete()">
+                  Delete</button>
+ 
+
+      <button type="submit" class="btn btn-outline-primary"
+                  style="margin-top: 10px;margin-left: 190px; color: black; font-weight: bold;">
+                  Edit</button>
+   
+</div>
+
+  </div>
+
+    <!-- <div class="col-4"></div> -->
+  </div>
+
+
+
+  <div class="" style="background-image: linear-gradient(skyblue,grey,skyblue); height: 80vh;">
+        <div class="row" style="height: auto;"> 
+
+        <div class="col-3" ></div>
+
+     <div id="note" class="col-6"  style="background-image: linear-gradient(white,gold);margin-top: 20px; margin-left: 7px; height: 40vh;">
+              <ng-container *ngFor="let item of arr"> <div class="col-12 mx-" style="background-color: white;color:black;padding:5px;" >
+                              
+              <b>{{item.title}}</b> <br> {{item.note}} </div></ng-container>
+     </div>
+          <div class="col-3 d-flex-right"></div>
+  </div>
+</div>
+<div class="" style="height: 100px; width: 200px;" *ngFor="let item of list"></div>
+<!-- </div> -->

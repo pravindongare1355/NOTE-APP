@@ -1,0 +1,65 @@
+<div class="container-fluid" style="background-repeat: no-repeat; background-image: url(https://www.itl.cat/pngfile/big/25-254878_parallel.jpg);">
+  <div class="row" style="height: 100vh; width: 150vh;">
+    
+    <div
+      class="col  d-flex flex-column justify-content-center align-items-center"
+    >
+      
+    </div>
+
+    
+    <div
+      class="col d-flex flex-column justify-content-center align-items-center "
+        style="margin-right: 75px;"      
+      [formGroup]="fbFormGroup"
+    >
+
+      <div class="alert alert-danger" role="alert" *ngIf="uiInvalidCredential">
+        Please Enter Valid Credential !!!
+      </div>
+      <div>
+        <fa-icon [icon]="faStickyNote" style="font-size: 60px"></fa-icon>
+      </div>
+      <div class="h2" style="margin-bottom: 30px;">Notes App</div>
+
+      <div class="h4" style="font-size: 30px; margin-bottom: 20px; font-weight: bold;">Login</div>
+
+
+      <div>
+        <input
+          type="text"
+          placeholder="Username"
+          class="form-control"
+          formControlName="username"
+          required minlength="4" maxlength="32"
+          style="margin-bottom: 5px; width: 300px; "
+        />
+      </div>
+
+      <div class="mt-1">
+        <input
+          type="password"
+          placeholder="Password"
+          class="form-control"
+          formControlName="password"
+          required minlength="4" maxlength="32"
+          style="margin-bottom: 5px; width: 300px; "
+        />
+      </div>
+
+      <button
+        class="btn btn-sm btn-primary mt-2 mb-2"
+        [disabled]="!fbFormGroup.valid"
+        (click)="loginProcessHere()"
+        
+        
+      >
+        Login Here
+      </button>
+
+      <a style="margin-top: 10px;" routerLink="/register">Create New Account</a>
+      <!-- <a routerLink="/register">Register Here</a> -->
+
+    </div>
+  </div>
+</div>

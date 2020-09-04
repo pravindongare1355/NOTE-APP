@@ -1,0 +1,29 @@
+<!-- <div style="background-image: url(https://picsum.photos/seed/picsum/1400/600);"> -->
+
+<div class="container-fluid"  >
+   <!-- style="height: 100%; width: 100%; background-image: url(https://i.pinimg.com/originals/1a/2f/ce/1a2fce9d9ad2c08b01995324bff7a9b3.jpg);"> -->
+  <div class="row bg-warning sticky-top" style="height: 55px;">
+    <div class="col d-flex align-items-center">
+      <fa-icon
+        [icon]="faStickyNote"
+        style="font-size: 32px; margin-right: 8px;"></fa-icon>
+         <div style="color: black; font-weight: bold; font-size: 25px; margin-left: 10px;">Notes App</div> 
+    </div>
+    <div class="col d-flex justify-content-end align-items-center">
+        <a class="btn btn-outline-light mr-1" routerLink="/home/" style="color:black">Home </a>
+        <a class="btn btn-outline-light mr-2" routerLink="/home/education" style="color:black">
+          Sticky Notes
+        </a>
+        <a class="btn btn-outline-light mr-2" routerLink="/home/contact-us" style="color:black">
+           About Us
+        </a>
+
+      <button class="btn btn-outline-light mr-1" (click)="processLogout()" style="color:black">
+        Log Out
+      </button>
+    </div>
+  </div>
+
+  <router-outlet></router-outlet>
+  <!-- <div style="background-image: url(https://picsum.photos/seed/picsum/1400/600);"></div> -->
+
